@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+  <title>MAC System</title>
+  <link rel="stylesheet" href="./AVV.css" type="text/css" crossorigin="anonymous">
+  <!-- BootStrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="static/moodboard/js/jquery.toast.min.js"></script>
+  <script src="../static/moodboard/js/html2canvas.js"></script>
+  <script src="../static/moodboard/js/FileSaver.min.js"></script>
+  <link rel="stylesheet" href="static/moodboard/css/jquery.toast.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css" />
+</head>
+
+<body>
+  <div id="loading" style="display: none;">
+    <div id="spinner">
+      <span id="alert-fix-text"></span>
+    </div>
+    <div id="overlay"></div>
+  </div>
+  <div id="main-panel" class="d-flex">
+    <div id="export" class="w-100">
+      <div id="moodboard-container" class="align-self-center">
+        <h5 id="word1_text">Word1</h5>
+        <div class="drag-list" id="moodboard">
+          <div class="drag-item col-4 px-0" draggable="true" id="img5">
+            <a class="icon-delete"><span class="fa fa-trash-o"></span></a>
+          </div>
+          <div class="drag-item col-4 px-0" draggable="true" id="img2">
+            <a class="icon-delete"><span class="fa fa-trash-o"></span></a>
+          </div>
+          <div class="drag-item col-4 px-0" draggable="true" id="img1">
+            <a class="icon-delete"><span class="fa fa-trash-o"></span></a>
+          </div>
+          <div class="drag-item col-4 px-0" draggable="true" id="img7">
+            <a class="icon-delete"><span class="fa fa-trash-o"></span></a>
+          </div>
+          <div class="drag-item col-4 px-0" draggable="true" id="img4">
+            <a class="icon-delete"><span class="fa fa-trash-o"></span></a>
+          </div>
+          <div class="drag-item col-4 px-0" draggable="true" id="img3">
+            <a class="icon-delete"><span class="fa fa-trash-o"></span></a>
+          </div>
+          <div class="drag-item col-4 px-0" draggable="true" id="img9">
+            <a class="icon-delete"><span class="fa fa-trash-o"></span></a>
+          </div>
+          <div class="drag-item col-4 px-0" draggable="true" id="img8">
+            <a class="icon-delete"><span class="fa fa-trash-o"></span></a>
+          </div>
+          <div class="drag-item col-4 px-0" draggable="true" id="img6">
+            <a class="icon-delete"><span class="fa fa-trash-o"></span></a>
+          </div>
+        </div>
+        <h5 id="word2_text" class="m-0 ml-2">Word2</h5>
+      </div>
+    </div>
+    <div id="side-panel">
+      <div class="container py-5">
+        <input type="text" id="word1" placeholder="Word1" class="input-text col-8 offset-2">
+        <input type="text" id="word2" placeholder="Word2" class="input-text col-8 offset-2 mt-1">
+        <hr class="col-8 border-white">
+        <button id="startBtn" class="btn btn-success offset-2 col-8 rounded-0" style="box-shadow: none;">START</button>
+        <!-- <div class="offset-2 col-8 d-flex" id="options" style="visibility: hidden;">
+          <span class="align-middle text-white mr-auto">FIRST</span>
+          <label class="switch">
+            <input type="checkbox" id="select_option">
+            <span class="slider"></span>
+          </label>
+          <span class="align-middle text-white ml-auto">SECOND</span>
+        </div>         -->
+        <button id="nextBtn" class="btn btn-success offset-2 col-8 rounded-0" style="box-shadow: none; visibility: hidden;">NEXT</button>
+        <button id="resetBtn" class="btn btn-success offset-2 col-8 rounded-0 mt-2" style="box-shadow: none; visibility: hidden;" hidden>RESET</button>
+        <button id="exportBtn" class="btn btn-success offset-2 col-8 rounded-0 mt-2" style="box-shadow: none; visibility: hidden;">EXPORT</button>
+      </div>
+    </div>
+  </div>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="./AVV.js"></script>
+</body>
+
+</html>
